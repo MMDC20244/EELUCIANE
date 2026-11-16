@@ -92,7 +92,7 @@
 
 
                 <input
-                    type="email"
+                    type="email" id="loginEmail" autocomplete="email"
                     placeholder="Digite seu email"
                     required
                 >
@@ -102,7 +102,7 @@
 
 
                 <input
-                    type="password"
+                    type="password" id="loginSenha" autocomplete="current-password"
                     placeholder="Digite sua senha"
                     required
                 >
@@ -145,7 +145,7 @@
                 <label>Nome</label>
 
                 <input
-                    type="text"
+                    type="text" id="cadNome" autocomplete="name"
                     placeholder="Digite seu nome"
                     required
                 >
@@ -155,7 +155,7 @@
                 <label>Gênero</label>
 
 
-                <select required>
+                <select id="cadGenero" required>
 
                     <option value="">
 
@@ -185,7 +185,7 @@
 
 
                 <input
-                    type="date"
+                    type="date" id="cadNascimento"
                     required
                 >
 
@@ -195,7 +195,7 @@
 
 
                 <input
-                    type="email"
+                    type="email" id="cadEmail" autocomplete="email"
                     placeholder="Digite seu email"
                     required
                 >
@@ -206,7 +206,7 @@
 
 
                 <input
-                    type="password"
+                    type="password" id="cadConfirmaSenha" minlength="6" autocomplete="new-password" id="cadSenha" minlength="6" autocomplete="new-password"
                     placeholder="Digite uma senha"
                     required
                 >
@@ -244,9 +244,9 @@
 
 
 
-    <!-- ALTERAÇÃO 21/08 - JAVASCRIPT DO LOGIN -->
+    <p id="mensagemAuth" role="status" aria-live="polite"></p>\n\n    <!-- ALTERAÇÃO 21/08 - JAVASCRIPT DO LOGIN -->
 
-    <script src="login.js"></script>
+    <script type="module" src="login.js"></script>
 
 
 </body>

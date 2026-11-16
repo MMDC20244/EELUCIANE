@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function autenticado() { return request.auth != null; }
+
+    match /usuarios/{uid} {
+      allow create: if autenticado() && request.auth.uid == uid
+        && request.resource.data.uid == uid
+        && request.resource.data.email == request.auth.token.email;
+      allow read: if autenticado() && request.auth.uid == uid;
+      allow update: if autenticado() && request.auth.uid == uid
+        && request.resource.data.uid == resource.data.uid
+        && request.resource.data.email == resource.data.email;
+      allow delete: if false;
+    }
+
+    // Coleções de catálogo, se você decidir armazenar filmes/séries no Firestore:
+    match /catalogo/{itemId} {
+      allow read: if autenticado();
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

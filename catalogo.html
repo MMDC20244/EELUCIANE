@@ -216,8 +216,8 @@
 
     <!-- ALTERAÇÃO 21/08 - JAVASCRIPT DO CATÁLOGO -->
 
-    <script src="filmes.js"></script>
-<script src="catalogo.js"></script>
+    <script type="module" src="auth-guard.js"></script>\n<script src="filmes.js"></script>
+<script src="catalogo.js"></script>\n<script>document.addEventListener("dembe:autenticado", e => { const el=document.querySelector(".ola"); if(el) el.textContent="OLÁ, "+(e.detail.user.displayName || e.detail.user.email); }); document.getElementById("botaoSair")?.addEventListener("click", () => window.sairDaConta?.());</script>
 
 
 </body>
