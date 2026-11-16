@@ -99,114 +99,11 @@
 
 
                 <label>Senha</label>
-
-
                 <input
-                    type="password" id="loginSenha" autocomplete="current-password"
-                    placeholder="Digite sua senha"
-                    required
-                >
-
-
-                <button
-                    type="submit"
-                    class="botaoPrincipal"
-                >
-
-                    Acessar
-
-                </button>
-
-            </form>
-
-
-
-            <!-- ===================================== -->
-            <!-- ALTERAÇÃO 21/08 - FORMULÁRIO CADASTRO -->
-            <!-- ===================================== -->
-
-            <form
-                id="formCadastro"
-                class="formEscondido"
-            >
-
-
-                <h1>Crie sua conta</h1>
-
-
-                <p class="subtitulo">
-
-                    Cadastre-se para acessar o catálogo.
-
-                </p>
-
-
-
-                <label>Nome</label>
-
-                <input
-                    type="text" id="cadNome" autocomplete="name"
-                    placeholder="Digite seu nome"
-                    required
-                >
-
-
-
-                <label>Gênero</label>
-
-
-                <select id="cadGenero" required>
-
-                    <option value="">
-
-                        Selecione
-
-                    </option>
-
-
-                    <option value="masculino">
-
-                        Masculino
-
-                    </option>
-
-
-                    <option value="feminino">
-
-                        Feminino
-
-                    </option>
-
-                </select>
-
-
-
-                <label>Data de nascimento</label>
-
-
-                <input
-                    type="date" id="cadNascimento"
-                    required
-                >
-
-
-
-                <label>Email</label>
-
-
-                <input
-                    type="email" id="cadEmail" autocomplete="email"
-                    placeholder="Digite seu email"
-                    required
-                >
-
-
-
-                <label>Senha</label>
-
-
-                <input
-                    type="password" id="cadConfirmaSenha" minlength="6" autocomplete="new-password" id="cadSenha" minlength="6" autocomplete="new-password"
+                    type="password"
+                    id="cadSenha"
+                    minlength="6"
+                    autocomplete="new-password"
                     placeholder="Digite uma senha"
                     required
                 >
@@ -214,10 +111,11 @@
 
 
                 <label>Confirmar senha</label>
-
-
                 <input
                     type="password"
+                    id="cadConfirmaSenha"
+                    minlength="6"
+                    autocomplete="new-password"
                     placeholder="Digite novamente"
                     required
                 >
@@ -244,7 +142,9 @@
 
 
 
-    <p id="mensagemAuth" role="status" aria-live="polite"></p>\n\n    <!-- ALTERAÇÃO 21/08 - JAVASCRIPT DO LOGIN -->
+    <p id="mensagemAuth" role="status" aria-live="polite"></p>
+
+    <!-- ALTERAÇÃO 21/08 - JAVASCRIPT DO LOGIN -->
 
     <script type="module" src="login.js"></script>
 
